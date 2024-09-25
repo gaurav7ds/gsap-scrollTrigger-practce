@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+:root{
+    --primary-color:#fff;
+    --secondary-color:#111;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: var(--primary-color);
+    transition: all 1.3s;
+}
+html.dark{
+    --primary-color:#111;
+    --secondary-color:#fff;
+    color: var(--primary-color);
+}
+body{
+    background-color: var(--secondary-color);
+}
+.cursor{
+    background-color:#edbfff;
+    mix-blend-mode: difference;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    top:0;
+    left:0;
+    pointer-events: none;
+}
+html.dark nav{
+    color: var(--secondary-color);
+}
+nav{
+    color: var(--primary-color);
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    font-size: 2rem;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 200;
+    mix-blend-mode: difference;
+}
+.links{
+    display: flex;
+    align-items: center;
+}
+nav p{
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-right: 4rem;
+    padding:1rem;
+    cursor: pointer;
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.menu{
+    background-color:var(--primary-color);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.line{
+    overflow: hidden;
+}
+main{
+    padding: 0 10rem;
+    overflow: hidden;
+}
+header{
+    width: 100%;
+    padding-top: 10rem;
+    position: sticky;
+    top: 6rem;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+header h1{
+    font-size: 7vw;
+    font-weight: 500;
+    white-space: nowrap;
+    user-select: none;
+    letter-spacing: -.6rem;
+}
+header p{
+    font-size: 1.6rem;
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5rem;
+    opacity: 1;
+    user-select: none;
+}
+.line-content{
+    transform-origin: left center;
+}
+.head-wrapper{
+    width: 100%;
+    height: 110vh;
+}
+.intro{
+    width: 100%;
+    height: 80vh;
+    transform: scale(.6);
+}
+.intro img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 5rem;
+}
+.about-wrapper{
+    padding-top: 12rem;
+    width: 100%;
+}
+.about-heading{
+    padding-right: 29vw;
+    font-size: 1.8vw;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.about-heading span{
+    font-size: 2rem;
+    margin-right: 3rem;
+}
+.about-content{
+    display: flex;
+}
+.about-left{
+    width: 40%;
+    margin-top: auto;
+}
+.about-left h3{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.about-left p{
+    font-size: 1.3rem;
+}
+.about-right{
+    width: 57%;
+    margin-left: auto;
+}
+.about-right img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 3rem;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2), 0 0 2rem rgba(0,0,0,0.1);
+}
+.row-data{
+    margin-right: 4rem;
+    padding: 2rem 0;
+    padding-right: 10vw;
+    border-top: .2rem solid var(--primary-color);
+}
+.cursor.active{
+    width: auto;
+    height: auto;
+    padding: .5rem 1rem;
+    border-radius: 20rem;
+    /* transition: all .3s ease; */
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease, padding 0.3s ease;
+}
+.cursor span{
+    font-size: 1.7rem;  
+    mix-blend-mode: difference;
+    color: white;
+}
+
+.work-wrapper{
+    width: 100%;
+    padding-top: 8vw;
+}
+.work-wrapper a{
+    display: block;
+}
+.work-wrapper h1{
+    font-size: 7vw;
+    font-weight: lighter;
+}
+
+.work-img{
+    width: 33vw;
+    height: 58rem;
+    overflow: hidden;
+}
+.work-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-row{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vw;
+}
+.down{
+    align-self:flex-end;
+}
+
+a{
+    color: var(--primary-color);
+}
+.work-info h3{
+    font-size: 2.4rem;
+    font-weight: lighter;
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+}
+.work-info p{
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+@media screen and (max-width: 1120px) {
+    .head-wrapper{
+        width: 100%;
+        height: 100vh;
+    }
+    main{
+        padding: 0 5rem;
+    }
+}
+@media screen and (max-width: 950px) {
+    main{
+        padding: 0 2rem;
+    }
+}
